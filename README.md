@@ -47,19 +47,23 @@ RowColCoords represents a row/column coordinate system used to find a cell in th
 
 
 # Source organization:  
->src/cs3500/reversi/model:  
-	Model interface - ROReversiModel and MutableReversiModel  
-	Model implementation - ReversiModel  
-	Player interface - IPlayer  
-	Player implementation - Player  
-	Color enum - Color  
-	Game state enum - GameState  
-	Row column coordinates - RowColCoords  
-	Player move interface - PlayerMove  
-	Player move implementations - Pass, SelectCell, and PlaceDisc  
+src/cs3500/reversi/model:  
+<ul>
+	<li>Model interface - ROReversiModel and MutableReversiModel</li>
+	<li>Model implementation - ReversiModel</li>
+	<li>Player interface - IPlayer</li>
+	<li>Player implementation - Player</li>
+	<li>Color enum - Color</li>
+	<li>Game state enum - GameState</li>
+	<li>Row column coordinates - RowColCoords</li>
+	<li>Player move interface - PlayerMove</li>
+	<li>Player move implementations - Pass, SelectCell, and PlaceDisc</li>
+</ul>
 src/cs3500/reversi/view  
-	View interface - IReversiTextView  
-	View implementation - ReversiTextView  
+<ul>
+	<li>View interface - IReversiTextView</li>
+	<li>View implementation - ReversiTextView</li>
+ </ul>
 
 
 
