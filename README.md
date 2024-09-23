@@ -67,8 +67,8 @@ src/cs3500/reversi/view
 
 
 
-#Updates 11/14/23:  
->New interfaces and classes:  
+# Updates 11/14/23:  
+## New interfaces and classes:  
 In src/cs3500/reversi  
     -Reversi  
         -> Class containing the main method for the game.  
@@ -102,14 +102,13 @@ In src/cs3500/reversi/strategy
         -> A FilteringReversiStrategy that prioritizes capturing the most opponent discs
            as possible.  
 
-    Extra Credit:  
-    -AvoidNextToCorners  
-        -> A FilteringReversiStrategy that prioritizes avoiding cells adjacent to corner cells.  
-    -PlayToCorners  
-        -> A FilteringReversiStrategy that prioritizes playing to corner cells.  
-    -MinimizeOpponentMaxCapture  
-        -> A FilteringReversiStrategy that prioritizes minimizing the maximum number of cells that
-           the opponent can capture.  
+## Extra Credit:  
+- AvoidNextToCorners  
+	  - A FilteringReversiStrategy that prioritizes avoiding cells adjacent to corner cells.  
+- PlayToCorners  
+	- A FilteringReversiStrategy that prioritizes playing to corner cells.  
+- MinimizeOpponentMaxCapture  
+	  - A FilteringReversiStrategy that prioritizes minimizing the maximum number of cells that the opponent can capture.  
 
 
 User actions:  
