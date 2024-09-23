@@ -1,14 +1,14 @@
 (This was submitted for part 1 of Reversi and is now somewhat outdated. The updates
 for parts 2, 3, and 4 are further down)  
-Overview:  
-The codebase is tyring to model the game of Reversi. We assume that the grid is a regular
+# Overview:  
+> The codebase is tyring to model the game of Reversi. We assume that the grid is a regular
 hexagon made up of hexagonal cells, the grid has an edge length of two or more cells, and
 there are two players. It uses the standard rules of the game Reversi. In our code, the grid
 is able to have a variable size. The game could be played with more than two players or the
 grid could be a different shape, but our model doesn't currently allow those variations.  
 
 
-Quick start:
+# Quick start:
 MutableReversiModel m = ReversiModel.create(3);  
 Player p1 = Player.create(1, m);  
 Player p2 = Player.create(2, m);  
@@ -21,7 +21,7 @@ Assert.assertTrue(m.isGameOver());
 Assert.assertEquals(Color.BLACK, m.getWinner());  
 
 
-Key components:  
+# Key components:  
 The model holds the information about the game board, state, and rules. It enforces those rules,
 allows moves to be made, and outputs information about the game. The model would be driven by the
 controller.  
@@ -31,7 +31,7 @@ The controller hasn't been implemented yet. The controller will be the component
 inputs and drives the control-flow of the system.  
 
 
-Key subcomponents of the model:  
+# Key subcomponents of the model:  
 Color represents the black or white color of a disc or the lack of color in an empty cell. The
 cells of the grid are represented as colors.  
 GameState represents the state of the game, specifying which player's turn it is or whether the
