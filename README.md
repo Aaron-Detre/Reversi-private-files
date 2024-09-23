@@ -9,7 +9,7 @@ grid could be a different shape, but our model doesn't currently allow those var
 
 
 Quick start:
-MutableReversiModel m = ReversiModel.create(3);
+MutableReversiModel m = ReversiModel.create(3);  
 Player p1 = Player.create(1, m);
 Player p2 = Player.create(2, m);
 RowColCoords posn = new RowColCoords(1, 3);
