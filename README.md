@@ -9,16 +9,18 @@ grid could be a different shape, but our model doesn't currently allow those var
 
 
 # Quick start:
-> MutableReversiModel m = ReversiModel.create(3);  
-Player p1 = Player.create(1, m);  
-Player p2 = Player.create(2, m);  
-RowColCoords posn = new RowColCoords(1, 3);  
-m.selectCell(posn);  
-m.placeDiscInSelectedCell();  
-m.pass();  
-p1.makeMove("pass");  
-Assert.assertTrue(m.isGameOver());  
-Assert.assertEquals(Color.BLACK, m.getWinner());  
+> <ul>
+	MutableReversiModel m = ReversiModel.create(3);  
+	Player p1 = Player.create(1, m);  
+	Player p2 = Player.create(2, m);  
+	RowColCoords posn = new RowColCoords(1, 3);  
+	m.selectCell(posn);  
+	m.placeDiscInSelectedCell();  
+	m.pass();  
+	p1.makeMove("pass");  
+	Assert.assertTrue(m.isGameOver());  
+	Assert.assertEquals(Color.BLACK, m.getWinner());  
+ </ul>
 
 
 # Key components:  
