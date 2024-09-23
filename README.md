@@ -9,7 +9,7 @@ grid could be a different shape, but our model doesn't currently allow those var
 
 
 # Quick start:
-> <ul>
+<ul>
 	<li>MutableReversiModel m = ReversiModel.create(3);</li>
 	<li>Player p1 = Player.create(1, m);</li>
 	<li>Player p2 = Player.create(2, m);</li>
