@@ -1,0 +1,60 @@
+The Reversi game, as currently implemented, is oriented to supports a two-player input
+In a future assignment, if we plan to introduce an AI player, allowing for scenarios like solitaire play (human vs. computer)
+and fully automated play (computer vs. computer). To enable this, we decided use the Command Pattern to abstract player actions,
+making it easy to plug in different player types.
+Command Pattern for Player Actions:
+
+The Command Pattern encapsulates a request as an object, and therefore allowing users to parameterize clients with different requests,
+queue requests, and support undoable operations. In the context of our game, each move made by a player (human or AI) can be encapsulated as a command.
+
+Player Interface:
+
+Lets say that MoveCommand is an interface that represents a move action:
+
+public interface MoveCommand {
+    void execute();
+}
+
+public interface Player {
+    MoveCommand makeMove(BoardState boardState);
+}
+
+For the human player, the makeMove method would wait for user input and then return the corresponding MoveCommand.
+For the AI player, the method would analyze the boardState and then decide on the best move, again returning the corresponding MoveCommand.
+
+Human and AI Player Implementations:
+
+public class HumanPlayer implements Player {
+    public MoveCommand makeMove(ReversiModel game) {
+        // User input scanning etc here
+        return new SpecificMoveCommand(parameters for player);
+    }
+}
+
+public class AIPlayer implements Player {
+    @Override
+    public MoveCommand makeMove(ReversiModel game) {
+        // AI input figured out here
+        return new SpecificMoveCommand(parameters for AI);
+    }
+}
+
+Each SpecificMoveCommand would implement the MoveCommand interface and encapsulate the logic to make a specific move on the board.
+Instantiating and Using Players:
+
+Here is a example on how we could instatiate a new game:
+
+Player player1 = new HumanPlayer();
+Player player2 = new AIPlayer();
+
+// Game loop:
+while(!game.isOver()) {
+    MoveCommand move = currentPlayer.makeMove(game);
+    move.execute();
+    // Switch current player, update game state, etc.
+}
+
+Conclusion:
+
+This design, built around the Command Pattern, not only abstracts the differences between human and AI players but also gives flexibility in future assignements.
+For instance, if we wanted to implement different AI strategies, this design would allow us to do so with minimal changes to the existing code.
