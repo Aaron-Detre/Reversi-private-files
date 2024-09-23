@@ -22,7 +22,7 @@ Assert.assertEquals(Color.BLACK, m.getWinner());
 
 
 # Key components:  
-The model holds the information about the game board, state, and rules. It enforces those rules,
+>The model holds the information about the game board, state, and rules. It enforces those rules,
 allows moves to be made, and outputs information about the game. The model would be driven by the
 controller.  
 The view currently just outputs a simple text view of the model. In future versions it will be
@@ -32,7 +32,7 @@ inputs and drives the control-flow of the system.
 
 
 # Key subcomponents of the model:  
-Color represents the black or white color of a disc or the lack of color in an empty cell. The
+>Color represents the black or white color of a disc or the lack of color in an empty cell. The
 cells of the grid are represented as colors.  
 GameState represents the state of the game, specifying which player's turn it is or whether the
 game is over.  
@@ -44,8 +44,8 @@ RowColCoords represents a row/column coordinate system used to find a cell in th
 (The view and controller don't have any subcomponents currently)  
 
 
-Source organization:  
-src/cs3500/reversi/model:  
+# Source organization:  
+>src/cs3500/reversi/model:  
 	Model interface - ROReversiModel and MutableReversiModel  
 	Model implementation - ReversiModel  
 	Player interface - IPlayer  
@@ -61,8 +61,8 @@ src/cs3500/reversi/view
 
 
 
-Updates 11/14/23:  
-New interfaces and classes:  
+#Updates 11/14/23:  
+>New interfaces and classes:  
 In src/cs3500/reversi  
     -Reversi  
         -> Class containing the main method for the game.  
